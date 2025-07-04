@@ -6,7 +6,7 @@ import numpy as np
 from PIL import Image
 
 # Load model
-model = load_model("alatmusiktradtf214.h5")
+model = load_model("alatmusiktradtf214.keras")
 
 # Kelas alat musik tradisional dan deskripsinya
 class_info = {
