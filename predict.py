@@ -6,7 +6,12 @@ import numpy as np
 from PIL import Image
 
 # Load model
-model = load_model("alatmusiktradtf214.keras", compile=False)
+from tensorflow.keras.layers import Normalization, Rescaling
+
+model = load_model("alatmusiktradtf214.keras", compile=False, custom_objects={
+    "Normalization": Normalization,
+    "Rescaling": Rescaling
+})
 
 # Kelas alat musik tradisional dan deskripsinya
 class_info = {
